@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-public enum Color
+public enum PColor
 {
     Red,
     Green,
@@ -23,11 +23,11 @@ public enum CellOrientation
 [Serializable]
 public struct Passenger : IEquatable<Passenger>
 {
-    public Color color;
+    public PColor pColor;
 
     public bool Equals(Passenger other)
     {
-        return color == other.color;
+        return pColor == other.pColor;
     }
 
     public override bool Equals(object obj)
@@ -37,7 +37,7 @@ public struct Passenger : IEquatable<Passenger>
 
     public override int GetHashCode()
     {
-        return (int)color;
+        return (int)pColor;
     }
 }
 
